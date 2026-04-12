@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,1C2A35,2E4A62,3F6B8C,5C8FB8&height=220&section=header&text=cpntodd&fontSize=62&fontColor=EAF2FF&fontAlignY=40&desc=HOI4%20mods%20and%20tools&descSize=16&descAlignY=62&descFontColor=C9D9EC&animation=fadeIn&cb=20260412b" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,1C2A35,2E4A62,3F6B8C,5C8FB8&height=220&section=header&text=cpntodd&fontSize=62&fontColor=EAF2FF&fontAlignY=40&desc=HOI4%20modder%20and%20tooler&descSize=16&descAlignY=62&descFontColor=C9D9EC&animation=fadeIn&cb=20260412c" />
   <br/>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1800&color=8FBCE6&center=true&vCenter=true&width=760&lines=HOI4+mods+and+mod+tools;Python+and+Go+projects;Random+apps+when+ideas+hit&cb=20260412b" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1800&color=8FBCE6&center=true&vCenter=true&width=760&lines=HOI4+modder+and+tooler;Making+younger+me+jealous;Open+to+collaborate+with&cb=20260412c" />
 </div>
 
 ---
