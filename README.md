@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,1C2A35,2E4A62,3F6B8C,5C8FB8&height=220&section=header&text=cpntodd&fontSize=62&fontColor=EAF2FF&fontAlignY=40&desc=HOI4%20mods%2C%20mod%20tools%2C%20and%20random%20app%20ideas&descSize=16&descAlignY=62&descFontColor=C9D9EC&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,1C2A35,2E4A62,3F6B8C,5C8FB8&height=220&section=header&text=cpntodd&fontSize=62&fontColor=EAF2FF&fontAlignY=40&desc=HOI4%20mods%2C%20mod%20tools%2C%20and%20random%20app%20ideas&descSize=16&descAlignY=62&descFontColor=C9D9EC&animation=fadeIn&cb=20260412" />
   <br/>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1800&color=8FBCE6&center=true&vCenter=true&width=760&lines=Started+in+high+school+copying+Stack+Overflow+for+GameMaker;Now+vibe-coding+to+make+younger+me+jealous;Not+just+Python%3A+HOI4+mods%2C+tools%2C+and+whatever+idea+hits+next" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1800&color=8FBCE6&center=true&vCenter=true&width=760&lines=Started+in+high+school+copying+Stack+Overflow+for+GameMaker;Now+vibe-coding+to+make+younger+me+jealous;Not+just+Python%3A+HOI4+mods%2C+tools%2C+and+whatever+idea+hits+next&cb=20260412" />
 </div>
 
 ---
