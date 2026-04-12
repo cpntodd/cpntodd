@@ -34,7 +34,7 @@ Currently shipping and improving: <strong>Album Detective</strong> and <strong>h
 ## Album Detective
 
 <a href="https://github.com/cpntodd/album-detective">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=cpntodd&repo=album-detective&theme=transparent" />
+  <img src="images/ad-banner.png" alt="Album Detective" width="340" />
 </a>
 
 Desktop app for collectors to compare local music against Spotify and Jellyfin, detect missing albums, and review results with artwork-aware CSV tooling.
@@ -49,7 +49,7 @@ Desktop app for collectors to compare local music against Spotify and Jellyfin, 
 ## hoi4treesnap
 
 <a href="https://github.com/cpntodd/hoi4treesnap">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=cpntodd&repo=hoi4treesnap&theme=transparent" />
+  <img src="images/banner-treesnap.png" alt="hoi4treesnap" width="340" />
 </a>
 
 Go-based HOI4 focus tree renderer with modern parsing, improved rendering reliability, Linux support, and production-style release packaging.
