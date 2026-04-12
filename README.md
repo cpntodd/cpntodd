@@ -1,16 +1,17 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,1C2A35,2E4A62,3F6B8C,5C8FB8&height=220&section=header&text=cpntodd&fontSize=62&fontColor=EAF2FF&fontAlignY=40&desc=Builder%20of%20practical%20tools%20for%20music%20collectors%20and%20HOI4%20modders&descSize=16&descAlignY=62&descFontColor=C9D9EC&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0,1C2A35,2E4A62,3F6B8C,5C8FB8&height=220&section=header&text=cpntodd&fontSize=62&fontColor=EAF2FF&fontAlignY=40&desc=HOI4%20mods%2C%20mod%20tools%2C%20and%20random%20app%20ideas&descSize=16&descAlignY=62&descFontColor=C9D9EC&animation=fadeIn" />
   <br/>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1800&color=8FBCE6&center=true&vCenter=true&width=760&lines=Python+desktop+apps+for+real+workflows;Go+tooling+for+HOI4+modding;Open+source%2C+release-driven%2C+user-focused" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1800&color=8FBCE6&center=true&vCenter=true&width=760&lines=Started+in+high+school+copying+Stack+Overflow+for+GameMaker;Now+vibe-coding+to+make+younger+me+jealous;Not+just+Python%3A+HOI4+mods%2C+tools%2C+and+whatever+idea+hits+next" />
 </div>
 
 ---
 
 <div align="center">
-I build focused tools that solve specific workflow pain points.
+Used to code in high school by stealing code from Stack Overflow for GameMaker games. Now vibe-coding to make younger me jealous.
 <br/>
-Currently shipping and improving:
-<strong>Album Detective</strong> and <strong>hoi4treesnap</strong>.
+I do not just use Python. My focus is on HOI4 mods and mod tools, plus other games and random apps that come to mind.
+<br/>
+Currently shipping and improving: <strong>Album Detective</strong> and <strong>hoi4treesnap</strong>.
 </div>
 
 ---
