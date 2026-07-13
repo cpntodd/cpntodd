@@ -11,7 +11,7 @@ Used to code in high school by stealing code from Stack Overflow for GameMaker g
 <br/>
 I do not just use Python. My focus is on HOI4 mods and mod tools, plus other games and random apps that come to mind.
 <br/>
-Currently shipping and improving: <strong>Album Detective</strong> and <strong>hoi4treesnap</strong>.
+Currently shipping and improving: <strong>Album Detective</strong>, <strong>hoi4treesnap</strong>, and <strong>HOI4-MCP</strong>.
 </div>
 
 ---
@@ -60,6 +60,23 @@ Go-based HOI4 focus tree renderer with modern parsing, improved rendering reliab
 
 </td>
 </tr>
+<tr>
+<td align="center" colspan="2">
+
+## HOI4-MCP
+
+<a href="https://github.com/cpntodd/HOI4-MCP">
+  <img src="https://raw.githubusercontent.com/cpntodd/HOI4-MCP/main/assets/banner-title.gif" alt="HOI4-MCP" width="420" />
+</a>
+
+MCP server + agent skills framework that turns AI coding assistants into HOI4 modding experts — deterministic mod data, syntax validation, zero hallucinations, and an adaptive learning system that remembers every mistake.
+
+<img src="https://img.shields.io/github/downloads/cpntodd/HOI4-MCP/total?style=flat-square&label=Downloads" />
+<img src="https://img.shields.io/badge/tests-101%20passed-4A6741?style=flat-square" />
+<img src="https://img.shields.io/github/languages/top/cpntodd/HOI4-MCP?style=flat-square" />
+
+</td>
+</tr>
 </table>
 </div>
 
@@ -98,6 +115,8 @@ Go-based HOI4 focus tree renderer with modern parsing, improved rendering reliab
 [Album Detective](https://github.com/cpntodd/album-detective)
 •
 [hoi4treesnap](https://github.com/cpntodd/hoi4treesnap)
+•
+[HOI4-MCP](https://github.com/cpntodd/HOI4-MCP)
 •
 [All Repositories](https://github.com/cpntodd?tab=repositories)
 •
