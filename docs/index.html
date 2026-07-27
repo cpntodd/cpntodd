@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cpntodd -- project hub</title>
+    <meta property="og:title" content="cpntodd -- project hub">
+    <meta property="og:description" content="HOI4 modder and tooler. Python, Go, C++, Linux. Vibe-coding since high school.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-display: 'VT323', 'Courier New', monospace;
+            --font-body:    'Space Mono', 'Courier New', monospace;
+            --bg:            #1e1e1e;
+            --surface:       #252526;
+            --surface-alt:   #2a2a2b;
+            --code-bg:       #2d2d2d;
+            --text:          #d4d4d4;
+            --text-heading:  #ffffff;
+            --text-muted:    #9d9d9d;
+            --accent:        #f09040;
+            --accent-light:  #f5a623;
+            --accent-dark:   #cc7722;
+            --border:        #3e3e42;
+            --border-table:  #f09040;
+            --radius:        8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ---- Header ---- */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 64px;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        header .tagline {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        header .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        header .badges img {
+            height: 20px;
+        }
+
+        /* ---- Navigation ---- */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0 20px;
+        }
+
+        nav .nav-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+        }
+
+        nav a {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--text);
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+            white-space: nowrap;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ---- Main ---- */
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-family: var(--font-display);
+            font-size: 36px;
+            color: var(--text-heading);
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section h2::before {
+            content: '# ';
+            color: var(--accent);
+        }
+
+        /* ---- About ---- */
+        #about p {
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        #about .focus-list {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        #about .focus-list li {
+            padding: 6px 0 6px 24px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        #about .focus-list li::before {
+            content: '--';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* ---- Project Grid ---- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.15s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .project-card h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .project-card h3 a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-card h3 a:hover {
+            color: var(--accent-light);
+        }
+
+        .project-card .desc {
+            color: var(--text);
+            font-size: 13px;
+            flex-grow: 1;
+            margin-bottom: 16px;
+        }
+
+        .project-card .badges-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .project-card .badges-row img {
+            height: 20px;
+        }
+
+        /* ---- Footer ---- */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid var(--accent);
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent-light);
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 42px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .nav-inner {
+                gap: 16px;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>cpntodd</h1>
+    <p class="tagline">HOI4 modder and tooler -- vibe-coding since high school</p>
+    <div class="badges">
+        <img src="https://img.shields.io/badge/python-3776AB?logo=python&style=flat-square" alt="Python">
+        <img src="https://img.shields.io/badge/go-00ADD8?logo=go&style=flat-square" alt="Go">
+        <img src="https://img.shields.io/badge/c++-00599C?logo=c%2B%2B&style=flat-square" alt="C++">
+        <img src="https://img.shields.io/badge/debian-A81D33?logo=debian&style=flat-square" alt="Debian">
+        <img src="https://img.shields.io/badge/linux-007ec6?logo=linux&style=flat-square" alt="Linux">
+        <img src="https://img.shields.io/github/followers/cpntodd?style=flat-square&label=followers" alt="Followers">
+    </div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#links">Links</a>
+    </div>
+</nav>
+
+<main>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            Used to code in high school by stealing code from Stack Overflow for GameMaker games.
+            Now vibe-coding to make younger me jealous.
+        </p>
+        <p>
+            I do not just use Python. My focus is on HOI4 mods and mod tools, plus other games
+            and random apps that come to mind.
+        </p>
+        <ul class="focus-list">
+            <li>Improving release pipelines and cross-platform packaging</li>
+            <li>Building UX that stays fast on large real-world datasets</li>
+            <li>Shipping practical tooling for collectors and HOI4 creators</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/album-detective">album-detective</a></h3>
+                <p class="desc">
+                    Desktop app for collectors to compare local music against Spotify and Jellyfin,
+                    detect missing albums, and review results with artwork-aware CSV tooling.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/python-3776AB?logo=python&style=flat-square" alt="Python">
+                    <img src="https://img.shields.io/github/stars/cpntodd/album-detective?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/github/license/cpntodd/album-detective?style=flat-square" alt="License">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/beigebox">beigebox</a></h3>
+                <p class="desc">
+                    Project M.A.D. -- Isometric RTS engine targeting circa-2005 hardware.
+                    C++17, deterministic lockstep netcode, Lua scripting, and an AI-assisted vibe-coding editor.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/c++-00599C?logo=c%2B%2B&style=flat-square" alt="C++">
+                    <img src="https://img.shields.io/github/stars/cpntodd/beigebox?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/HearME">HearME</a></h3>
+                <p class="desc">
+                    Single-binary desktop web app for music discovery. Artist relationship graph,
+                    tour grid from Bandsintown/Songkick, and a Winamp-themed audio player with real-time visualizers.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/go-00ADD8?logo=go&style=flat-square" alt="Go">
+                    <img src="https://img.shields.io/github/stars/cpntodd/HearME?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/badge/license-AGPL--3.0-red?style=flat-square" alt="AGPL-3.0">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/hoi4treesnap">hoi4treesnap</a></h3>
+                <p class="desc">
+                    Go-based HOI4 focus tree renderer with modern parsing, improved rendering reliability,
+                    Linux support, and production-style release packaging.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/go-00ADD8?logo=go&style=flat-square" alt="Go">
+                    <img src="https://img.shields.io/github/stars/cpntodd/hoi4treesnap?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/github/license/cpntodd/hoi4treesnap?style=flat-square" alt="License">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/HOI4FocusGUI">HOI4FocusGUI</a></h3>
+                <p class="desc">
+                    Python-based Hearts of Iron IV mod GUI for generating and editing focus trees.
+                    Visual node editor, random tree generator, state viewport, and HOI4 export tooling.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/python-3776AB?logo=python&style=flat-square" alt="Python">
+                    <img src="https://img.shields.io/github/stars/cpntodd/HOI4FocusGUI?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/github/license/cpntodd/HOI4FocusGUI?style=flat-square" alt="License">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/HOI4-MCP">HOI4-MCP</a></h3>
+                <p class="desc">
+                    MCP server + agent skills framework that turns AI coding assistants into HOI4 modding
+                    experts -- deterministic mod data, syntax validation, zero hallucinations.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/python-3776AB?logo=python&style=flat-square" alt="Python">
+                    <img src="https://img.shields.io/github/stars/cpntodd/HOI4-MCP?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/badge/tests-101%20passed-4A6741?style=flat-square" alt="Tests">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/Mounter">Mounter</a></h3>
+                <p class="desc">
+                    GTK4 C++ desktop app. Scan for your SMB server and click mount --
+                    no more manual fstab editing. Modern, fast, and frustration-free.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/c++-00599C?logo=c%2B%2B&style=flat-square" alt="C++">
+                    <img src="https://img.shields.io/github/stars/cpntodd/Mounter?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square" alt="GPL-3.0">
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/cpntodd/oddnetkernel">oddnetkernel</a></h3>
+                <p class="desc">
+                    Custom Zen kernel for AMD desktops on Debian. Zen+ patches, Polaris GPU tuning,
+                    CIFS modules, and a one-line APT install. Built with Clang 21 + LLD.
+                </p>
+                <div class="badges-row">
+                    <img src="https://img.shields.io/badge/kernel.org-007ec6?logo=linux&style=flat-square" alt="Kernel">
+                    <img src="https://img.shields.io/github/stars/cpntodd/oddnetkernel?style=flat-square" alt="Stars">
+                    <img src="https://img.shields.io/github/license/cpntodd/oddnetkernel?style=flat-square" alt="License">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="links">
+        <h2>Links</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <a href="https://github.com/cpntodd" style="color:var(--accent);font-family:var(--font-display);font-size:22px;text-decoration:none;">GitHub Profile</a>
+            <span style="color:var(--text-muted);">&bull;</span>
+            <a href="https://github.com/cpntodd?tab=repositories" style="color:var(--accent);font-family:var(--font-display);font-size:22px;text-decoration:none;">All Repositories</a>
+            <span style="color:var(--text-muted);">&bull;</span>
+            <a href="https://github.com/cpntodd?tab=repositories&q=&type=&language=&sort=stargazers" style="color:var(--accent);font-family:var(--font-display);font-size:22px;text-decoration:none;">Latest Releases</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>(c) 2026 cpntodd -- <a href="https://github.com/cpntodd/cpntodd">github.com/cpntodd/cpntodd</a></p>
+</footer>
+
+</body>
+</html>
