@@ -89,6 +89,10 @@ Go-based HOI4 focus tree renderer with modern parsing, improved rendering reliab
 
 ## [HOI4FocusGUI](https://github.com/cpntodd/HOI4FocusGUI)
 
+<a href="https://github.com/cpntodd/HOI4FocusGUI">
+  <img src="https://raw.githubusercontent.com/cpntodd/HOI4FocusGUI/main/images/HOI4TEXT.png" alt="HOI4FocusGUI" width="340" />
+</a>
+
 Python-based Hearts of Iron IV mod GUI for generating and editing focus trees. Visual node editor, random tree generator, state viewport, and HOI4 export tooling.
 
 <img src="https://img.shields.io/badge/python-3776AB?logo=python&style=flat-square&label=" />
@@ -117,6 +121,10 @@ MCP server + agent skills framework that turns AI coding assistants into HOI4 mo
 
 ## [Mounter](https://github.com/cpntodd/Mounter)
 
+<a href="https://github.com/cpntodd/Mounter">
+  <img src="https://raw.githubusercontent.com/cpntodd/Mounter/master/assets/banner.gif" alt="Mounter" width="340" />
+</a>
+
 GTK4 C++ desktop app. Scan for your SMB server and click mount -- no more manual fstab editing. Modern, fast, and frustration-free.
 
 <img src="https://img.shields.io/badge/c++-00599C?logo=c%2B%2B&style=flat-square&label=" />
@@ -127,6 +135,10 @@ GTK4 C++ desktop app. Scan for your SMB server and click mount -- no more manual
 <td align="center" width="50%">
 
 ## [oddnetkernel](https://github.com/cpntodd/oddnetkernel)
+
+<a href="https://github.com/cpntodd/oddnetkernel">
+  <img src="https://raw.githubusercontent.com/cpntodd/oddnetkernel/master/assets/banner.svg" alt="oddnetkernel" width="340" />
+</a>
 
 Custom Zen kernel for AMD desktops on Debian. Zen+ patches, Polaris GPU tuning, CIFS modules, and a one-line APT install. Built with Clang 21 + LLD.
 
